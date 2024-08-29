@@ -3,7 +3,7 @@ def main():
     reader = readers(path_to_file)
     word_count = counters(reader)
     print(reader)
-    print(word_count)
+    print(f"{word_count} words found in the document.")
 
 
 def readers(path_to_file):
