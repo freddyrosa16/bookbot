@@ -16,10 +16,17 @@ def letter_counter(text):
                 character_counter[letter] = 1
     return character_counter
 
-def report(characters):
-    for key, value in characters.items():
-        
-
 def sort_on(items):
     return items["num"]
+
+def report(characters):
+    new_list = []
+    for key, value in characters.items():
+        new_dict = {
+            "char": key,
+            "num": value
+        }
+        new_list.append(new_dict)
+    new_list.sort(reverse=True, key=sort_on)
+    return new_list
         
